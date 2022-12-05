@@ -1,0 +1,25 @@
+.footer{
+    padding: 30px 20px;
+    background: black;
+    .footer-parts{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        color: white;
+       
+        .category{
+            h3{
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+            span{
+                display: block;
+                margin: 10px 0px;
+            }
+        }
+        .about{
+            p{
+                padding: 15px 25px 0px 0px;
+            }
+        }
+    }
+}

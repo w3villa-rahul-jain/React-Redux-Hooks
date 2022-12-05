@@ -1,0 +1,14 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  .inner-card {
+    padding: 20px;
+    border: 1px solid red;
+    .description{
+        height: 70px;
+        overflow: hidden;
+    }
+  }
+  
+}
