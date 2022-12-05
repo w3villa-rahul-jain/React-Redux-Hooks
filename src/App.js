@@ -1,13 +1,21 @@
-import React from "react";
-// import CounterOne from './useReduce/CounterOne'
-import CounterThree from "./useReduce/CounterThree";
+import React, { useState } from "react";
+import "./App.css";
+import { useSelector, useDispatch } from "react-redux";
+import { incNumber, decNumber, dec5Number } from "./redux/Actions/index";
 
-function App() {
+const App = () => {
+  const myState = useSelector((state) => state.changeTheNumber);
+  const dispatch = useDispatch();
   return (
-    <div style={{ textAlign: "center" }}>
-      <CounterThree />
-    </div>
+    <>
+      <div className="text-center">
+        <h2>Welcome to Redux</h2>
+        <button onClick={() => dispatch(incNumber())}>Add + </button>
+        <button onClick={() => dispatch(dec5Number())}>Dec 5 - </button>
+        <span>{myState}</span>
+        <button onClick={() => dispatch(decNumber())}>Sub - </button>
+      </div>
+    </>
   );
-}
-
+};
 export default App;

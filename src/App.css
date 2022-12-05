@@ -1,9 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-li{
-  list-style-type: none;
+.text-center {
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  outline: none;
+  border: none;
+  text-align: center;
+  background: peru;
+  color: white;
+  width: 200px;
+  margin: 20px;
 }
