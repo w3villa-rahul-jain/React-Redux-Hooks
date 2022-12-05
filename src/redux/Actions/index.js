@@ -10,9 +10,10 @@ export const decNumber = () =>{
     }
 }
 
-export const dec5Number = () =>{
+export const dec5Number = (num) =>{
     return {
         type: "Decrement5",
+        payload: num,
     }
 }
 
