@@ -44,11 +44,11 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+function App2() {
   return (
           <>
             <h1>hello</h1>    
           </>
   )
   }
-export default App;
+export default App2;

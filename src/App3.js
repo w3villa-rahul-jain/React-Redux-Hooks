@@ -13,11 +13,10 @@ import React from "react";
 // import PostByCategory from "./data/PostByCategory";
 // import Products from "./pages/Products/Products";
 import CompA from "./contextHook/CompA";
-
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
 
-function App() {
+function App3() {
   return (
     <>
       <p> main component </p>
@@ -29,4 +28,4 @@ function App() {
     </>
   );
 }
-export default App;
+export default App3;
