@@ -19,12 +19,25 @@ function Products() {
       });
   }, []);
 
-  function AscOrder() {
+  function filterPrice() {
     let value1 = value;
     const filterData = products.filter((item) =>
-      item.price > value1 ? item : ""
+      item.price < value1 ? item : ""
     );
     setProducts(filterData);
+  }
+
+  function decOrder() {
+    console.log(products.length);
+    console.log(products[0]);
+    let decending = [];
+    for (let i = products.length - 1; i >= 0; i--) {
+      console.log("loop", i, products[i]);
+      decending.push(products[i]);
+    }
+    console.log({ decending });
+      setProducts(decending);
+    
   }
 
   console.log(value);
@@ -37,20 +50,19 @@ function Products() {
           onChange={(e) => setValue(e.target.value)}
           placeholder="Enter Price Filter"
         />
-        <button onClick={AscOrder}>Filter By Price</button>
+        <button onClick={filterPrice}>Filter By Price</button>
+        <button onClick={decOrder}>Dec Order</button>
       </div>
       <div className="grid-cutter">
-        {products?.map((pro) => {
-          return (
-            <div className="single-product-card" key={pro.id}>
-              <span>{pro.id}</span>
-              <h3 className="title">{pro.title}</h3>
-              <h3 className="price">{pro.price}</h3>
-              <p className="description">{pro.description}</p>
-              <h4 className="category">{pro.category}</h4>
-            </div>
-          );
-        })}
+        {products?.map((pro) => (
+          <div className="single-product-card" key={pro.id}>
+            <span>{pro.id}</span>
+            <h3 className="title">{pro.title}</h3>
+            <h3 className="price">{pro.price}</h3>
+            <p className="description">{pro.description}</p>
+            <h4 className="category">{pro.category}</h4>
+          </div>
+        ))}
       </div>
     </>
   );

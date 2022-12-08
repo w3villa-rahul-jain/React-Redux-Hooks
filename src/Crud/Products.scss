@@ -1,0 +1,16 @@
+.input-buttons{
+    margin: 20px 40px; 
+}
+
+
+.grid-cutter{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 20px 40px;
+    .single-product-card{
+        border: 1px solid red;
+        padding: 20px;
+        text-align: center;
+    }
+}
